@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4511" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3745"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vZ5-tC-pAy"/>
+                        <viewControllerLayoutGuide type="bottom" id="B1i-v2-W4r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3u-fx-wVd">
+                                <rect key="frame" x="53" y="509" width="214" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e0d-Uf-3Er">
+                                        <rect key="frame" x="161" y="4" width="51" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="deviceMetricsSwitchAction:" destination="vXZ-lx-hvc" eventType="valueChanged" id="k3u-UB-TEA"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use Device Metrics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xF-LI-El8">
+                                        <rect key="frame" x="4" y="9" width="149" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="e0d-Uf-3Er" firstAttribute="top" secondItem="r3u-fx-wVd" secondAttribute="top" constant="4" id="5YY-uO-6sZ"/>
+                                    <constraint firstItem="4xF-LI-El8" firstAttribute="centerY" secondItem="e0d-Uf-3Er" secondAttribute="centerY" id="7UN-uU-fq0"/>
+                                    <constraint firstItem="4xF-LI-El8" firstAttribute="leading" secondItem="r3u-fx-wVd" secondAttribute="leading" constant="4" id="SVX-Wc-wRZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="e0d-Uf-3Er" secondAttribute="bottom" constant="4" id="aH1-sn-cjZ"/>
+                                    <constraint firstItem="e0d-Uf-3Er" firstAttribute="leading" secondItem="4xF-LI-El8" secondAttribute="trailing" constant="8" symbolic="YES" id="niF-DF-uSD"/>
+                                    <constraint firstAttribute="trailing" secondItem="e0d-Uf-3Er" secondAttribute="trailing" constant="4" id="xVL-3t-eW5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="r3u-fx-wVd" secondAttribute="bottom" constant="20" symbolic="YES" id="Acn-29-X1i"/>
+                            <constraint firstAttribute="centerX" secondItem="r3u-fx-wVd" secondAttribute="centerX" id="S6F-Ai-RfG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="deviceMetricsSwitch" destination="e0d-Uf-3Er" id="eCY-ZB-aWY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
