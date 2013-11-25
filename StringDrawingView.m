@@ -7,6 +7,7 @@
 //
 
 #import "StringDrawingView.h"
+#import "StringDrawerCommon.h"
 
 @implementation StringDrawingView
 {
@@ -104,64 +105,16 @@
 
 - (void)drawRect:(NSRect)dirtyRect
 {
+    CGContextRef ctx = [[NSGraphicsContext currentContext] graphicsPort];
+    
     [[NSColor whiteColor] setFill];
     NSRectFill(dirtyRect);
     
-    NSRect yAxis = (NSRect){.origin={-0.5, self.bounds.origin.y - 0.5}, .size=(NSSize){.width=1, .height=self.bounds.size.height}};
-    [[NSColor lightGrayColor] setFill];
-    NSRectFill(yAxis);
+    DrawOriginMarkerAtPoint(ctx, self.bounds.origin);
     
-    NSRect xAxis = (NSRect){.origin={self.bounds.origin.x - 0.5, -0.5}, .size=(NSSize){.width=self.bounds.size.width, .height=1}};
-    NSRectFill(xAxis);
-    
-    NSRect textRect = (NSRect){.size=self.bounds.size, .origin=NSZeroPoint};
-    
-    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
-    style.headIndent = _headIndent;
-    style.firstLineHeadIndent = _firstLineHeadIndent;
-    style.tailIndent = _tailIndent;
-    NSMutableDictionary *attributes = [@{NSFontAttributeName : [NSFont fontWithName:@"Helvetica" size:24], NSParagraphStyleAttributeName : style} mutableCopy];
-    [style release];
-        
-    NSStringDrawingOptions options = 0;
-    if (_usesDeviceMetrics)
-        options |= NSStringDrawingUsesDeviceMetrics;
-    
-    {
-        NSRect lineFragmentRect = [_stringToDraw boundingRectWithSize:textRect.size options:(options | NSStringDrawingUsesLineFragmentOrigin) attributes:attributes];
-        [[[NSColor redColor] colorWithAlphaComponent:0.5f] setFill];
-        
-        [NSBezierPath fillRect:lineFragmentRect];
-        
-        if ([[NSGraphicsContext currentContext] isFlipped]) {
-            [[[NSColor orangeColor] colorWithAlphaComponent:0.5f] setFill];
-            lineFragmentRect.origin.y = -lineFragmentRect.origin.y;
-            lineFragmentRect.origin.y -= lineFragmentRect.size.height;
-            [NSBezierPath fillRect:lineFragmentRect];
-        }
-    }
-    
-    {
-        NSRect baselineRect = [_stringToDraw boundingRectWithSize:textRect.size options:options attributes:attributes];
-        [[[NSColor greenColor] colorWithAlphaComponent:0.5f] setFill];
-        
-        [NSBezierPath fillRect:baselineRect];
-        
-        if ([[NSGraphicsContext currentContext] isFlipped]) {
-            [[[NSColor blueColor] colorWithAlphaComponent:0.5f] setFill];
-            baselineRect.origin.y = -baselineRect.origin.y;
-            baselineRect.origin.y -= baselineRect.size.height;
-            [NSBezierPath fillRect:baselineRect];
-        }
-    }
-    
-    [attributes setObject:[NSColor greenColor] forKey:NSForegroundColorAttributeName];
-    [_stringToDraw drawWithRect:textRect options:options attributes:attributes];
-    
-    [attributes setObject:[NSColor redColor] forKey:NSForegroundColorAttributeName];
-    [_stringToDraw drawWithRect:textRect options:(options | NSStringDrawingUsesLineFragmentOrigin) attributes:attributes];
-    
-    [attributes release];
+    NSRect textRect = (NSRect){.size=NSInsetRect(self.bounds, 40, 40).size, .origin=NSZeroPoint};
+    NSDictionary *attributes = DefaultAttributesDictionaryWithIndents([NSFont fontWithName:@"Helvetica" size:24], _headIndent, _firstLineHeadIndent, _tailIndent);
+    [_stringToDraw stringDrawer_drawWithAttributes:attributes inRect:textRect ofContext:ctx usingDeviceMetrics:_usesDeviceMetrics contextIsFlipped:[[NSGraphicsContext currentContext] isFlipped]];
 }
 
 @end
