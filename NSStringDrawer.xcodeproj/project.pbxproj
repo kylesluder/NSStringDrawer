@@ -42,8 +42,8 @@
 		2750500516B33F24007E99A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2750500616B33F24007E99A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2750500916B33F24007E99A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		2750501016B34020007E99A1 /* StringDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StringDrawingView.h; path = ../StringDrawingView.h; sourceTree = "<group>"; };
-		2750501116B34020007E99A1 /* StringDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StringDrawingView.m; path = ../StringDrawingView.m; sourceTree = "<group>"; };
+		2750501016B34020007E99A1 /* StringDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringDrawingView.h; sourceTree = "<group>"; };
+		2750501116B34020007E99A1 /* StringDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringDrawingView.m; sourceTree = "<group>"; };
 		2783D4371837E84800DFAEFA /* iStringDrawer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iStringDrawer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2783D4381837E84800DFAEFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2783D43A1837E84800DFAEFA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -524,6 +524,7 @@
 				2783D4661837E84800DFAEFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
