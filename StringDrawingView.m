@@ -53,9 +53,7 @@
 
 - (void)setStringToDraw:(NSString *)stringToDraw;
 {
-    [stringToDraw retain];
-    [_stringToDraw release];
-    _stringToDraw = stringToDraw;
+    _stringToDraw = [stringToDraw copy];
     [self setNeedsDisplay:YES];
 }
 

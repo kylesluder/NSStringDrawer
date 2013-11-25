@@ -53,4 +53,16 @@
     [self setNeedsDisplay];
 }
 
+@synthesize stringToDraw=_stringToDraw;
+- (NSString *)stringToDraw;
+{
+    return _stringToDraw;
+}
+
+- (void)setStringToDraw:(NSString *)stringToDraw;
+{
+    _stringToDraw = [stringToDraw copy];
+    [self setNeedsDisplay];
+}
+
 @end

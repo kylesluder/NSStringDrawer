@@ -10,7 +10,7 @@
 
 @interface StringDrawingView : NSView
 
-@property (retain) NSString *stringToDraw;
+@property (copy) NSString *stringToDraw;
 - (void)setFlipped:(BOOL)flipped;
 
 @property BOOL usesDeviceMetrics;

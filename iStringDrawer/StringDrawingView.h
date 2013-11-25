@@ -10,7 +10,7 @@
 
 @interface StringDrawingView : UIView
 
-@property (retain) NSString *stringToDraw;
+@property (copy) NSString *stringToDraw;
 
 @property BOOL usesDeviceMetrics;
 
