@@ -19,6 +19,6 @@ extern NSDictionary *DefaultAttributesDictionaryWithIndents(id font, CGFloat hea
 
 @interface NSString (StringDrawerCommon)
 
-- (void)stringDrawer_drawWithAttributes:(NSDictionary *)attributes inRect:(CGRect)rect ofContext:(CGContextRef)ctx usingDeviceMetrics:(BOOL)useDeviceMetrics contextIsFlipped:(BOOL)isFlipped;
+- (void)stringDrawer_drawWithAttributes:(NSDictionary *)attributes inRect:(CGRect)rect ofContext:(CGContextRef)ctx usingDeviceMetrics:(BOOL)useDeviceMetrics usingFontLeading:(BOOL)useFontLeading  contextIsFlipped:(BOOL)isFlipped;
 
 @end

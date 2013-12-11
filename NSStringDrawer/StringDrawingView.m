@@ -14,6 +14,7 @@
     BOOL _flipped;
     NSString *_stringToDraw;
     BOOL _usesDeviceMetrics;
+    BOOL _usesFontLeading;
     CGFloat _headIndent, _firstLineHeadIndent, _tailIndent;
 }
 
@@ -23,6 +24,7 @@
         return nil;
     
     _stringToDraw = @"hello\nworld";
+    _usesFontLeading = YES;
     
     [self setBoundsOrigin:NSMakePoint(-40, -40)];
     
@@ -65,6 +67,17 @@
 - (void)setUsesDeviceMetrics:(BOOL)yn;
 {
     _usesDeviceMetrics = yn;
+    [self setNeedsDisplay:YES];
+}
+
+- (BOOL)usesFontLeading;
+{
+    return _usesFontLeading;
+}
+
+- (void)setUsesFontLeading:(BOOL)yn;
+{
+    _usesFontLeading = yn;
     [self setNeedsDisplay:YES];
 }
 
@@ -111,8 +124,8 @@
     DrawOriginMarkerAtPoint(ctx, self.bounds.origin);
     
     NSRect textRect = (NSRect){.size=NSInsetRect(self.bounds, 40, 40).size, .origin=NSZeroPoint};
-    NSDictionary *attributes = DefaultAttributesDictionaryWithIndents([NSFont fontWithName:@"Helvetica" size:24], _headIndent, _firstLineHeadIndent, _tailIndent);
-    [_stringToDraw stringDrawer_drawWithAttributes:attributes inRect:textRect ofContext:ctx usingDeviceMetrics:_usesDeviceMetrics contextIsFlipped:[[NSGraphicsContext currentContext] isFlipped]];
+    NSDictionary *attributes = DefaultAttributesDictionaryWithIndents([NSFont systemFontOfSize:[NSFont systemFontSizeForControlSize:NSRegularControlSize]], _headIndent, _firstLineHeadIndent, _tailIndent);
+    [_stringToDraw stringDrawer_drawWithAttributes:attributes inRect:textRect ofContext:ctx usingDeviceMetrics:_usesDeviceMetrics usingFontLeading:_usesFontLeading contextIsFlipped:[[NSGraphicsContext currentContext] isFlipped]];
 }
 
 @end

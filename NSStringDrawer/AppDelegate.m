@@ -26,6 +26,11 @@
     [_stringDrawingView setUsesDeviceMetrics:[sender state] == NSOnState];
 }
 
+- (void)takeUsesFontLeading:(id)sender;
+{
+    [_stringDrawingView setUsesFontLeading:[sender state] == NSOnState];
+}
+
 - (void)takeHeadIndentFrom:(id)sender;
 {
     [_stringDrawingView setHeadIndent:[[sender objectValue] floatValue]];

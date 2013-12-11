@@ -17,6 +17,7 @@
 - (IBAction)takeFlipped:(id)sender;
 - (IBAction)takeStringToDraw:(id)sender;
 - (IBAction)takeUsesDeviceMetrics:(id)sender;
+- (IBAction)takeUsesFontLeading:(id)sender;
 
 - (IBAction)takeHeadIndentFrom:(id)sender;
 - (IBAction)takeFirstLineHeadIndentFrom:(id)sender;

@@ -38,7 +38,7 @@
     
     CGRect textRect = (CGRect){.size=CGRectInset(self.bounds, 60, 60).size, .origin=CGPointZero};
     NSDictionary *attributes = DefaultAttributesDictionaryWithIndents([UIFont fontWithName:@"Helvetica" size:24], 0, 0, 0);
-    [_stringToDraw stringDrawer_drawWithAttributes:attributes inRect:textRect ofContext:ctx usingDeviceMetrics:_usesDeviceMetrics contextIsFlipped:NO];
+    [_stringToDraw stringDrawer_drawWithAttributes:attributes inRect:textRect ofContext:ctx usingDeviceMetrics:_usesDeviceMetrics usingFontLeading:YES contextIsFlipped:NO];
 }
 
 @synthesize usesDeviceMetrics=_usesDeviceMetrics;

@@ -75,7 +75,7 @@ NSDictionary *DefaultAttributesDictionaryWithIndents(id font, CGFloat headIndent
 
 #pragma mark -
 
-- (void)stringDrawer_drawWithAttributes:(NSDictionary *)attributes inRect:(CGRect)rect ofContext:(CGContextRef)ctx usingDeviceMetrics:(BOOL)useDeviceMetrics contextIsFlipped:(BOOL)contextIsFlipped;
+- (void)stringDrawer_drawWithAttributes:(NSDictionary *)attributes inRect:(CGRect)rect ofContext:(CGContextRef)ctx usingDeviceMetrics:(BOOL)useDeviceMetrics usingFontLeading:(BOOL)useFontLeading contextIsFlipped:(BOOL)contextIsFlipped;
 {
     CGContextSaveGState(ctx);
     CGContextSetBlendMode(ctx, kCGBlendModeNormal);
@@ -86,8 +86,12 @@ NSDictionary *DefaultAttributesDictionaryWithIndents(id font, CGFloat headIndent
     
     
     NSStringDrawingOptions options = 0;
+    
     if (useDeviceMetrics)
         options |= NSStringDrawingUsesDeviceMetrics;
+    
+    if (useFontLeading)
+        options |= NSStringDrawingUsesFontLeading;
     
     {
         CGRect lineFragmentRect = [self stringDrawer_boundingRectWithSize:rect.size options:(options | NSStringDrawingUsesLineFragmentOrigin) attributes:attributes];

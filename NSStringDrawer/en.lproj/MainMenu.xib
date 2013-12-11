@@ -650,22 +650,19 @@
         <window title="NSStringDrawer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="514" height="405"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <rect key="contentRect" x="335" y="390" width="514" height="447"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
             <view key="contentView" id="372">
-                <rect key="frame" x="0.0" y="0.0" width="514" height="405"/>
+                <rect key="frame" x="0.0" y="0.0" width="514" height="447"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="536" customClass="StringDrawingView">
-                        <rect key="frame" x="20" y="112" width="321" height="273"/>
+                        <rect key="frame" x="20" y="114" width="313" height="313"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="556">
-                        <rect key="frame" x="20" y="65" width="321" height="39"/>
+                    <textField verticalHuggingPriority="749" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="556">
+                        <rect key="frame" x="20" y="52" width="313" height="54"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="39" id="841"/>
-                        </constraints>
                         <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="557">
                             <font key="font" metaFont="system"/>
                             <string key="title">hello
@@ -678,7 +675,7 @@ world</string>
                         </connections>
                     </textField>
                     <button translatesAutoresizingMaskIntoConstraints="NO" id="567">
-                        <rect key="frame" x="347" y="88" width="69" height="18"/>
+                        <rect key="frame" x="339" y="90" width="69" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Flipped" bezelStyle="regularSquare" imagePosition="left" inset="2" id="568">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -689,11 +686,8 @@ world</string>
                         </connections>
                     </button>
                     <button translatesAutoresizingMaskIntoConstraints="NO" id="575">
-                        <rect key="frame" x="347" y="63" width="149" height="18"/>
+                        <rect key="frame" x="339" y="70" width="113" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="145" id="641"/>
-                        </constraints>
                         <buttonCell key="cell" type="check" title="Device Metrics" bezelStyle="regularSquare" imagePosition="left" inset="2" id="576">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
@@ -702,15 +696,26 @@ world</string>
                             <action selector="takeUsesDeviceMetrics:" target="494" id="608"/>
                         </connections>
                     </button>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="VJW-fc-HWy">
+                        <rect key="frame" x="339" y="50" width="125" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Use font leading" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="E6O-ed-fLb">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="takeUsesFontLeading:" target="494" id="xOC-Ia-hTL"/>
+                        </connections>
+                    </button>
                     <box autoresizesSubviews="NO" title="Box" boxType="custom" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="623">
-                        <rect key="frame" x="349" y="112" width="145" height="273"/>
+                        <rect key="frame" x="341" y="114" width="153" height="313"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView">
-                            <rect key="frame" x="1" y="1" width="143" height="271"/>
+                            <rect key="frame" x="1" y="1" width="151" height="311"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <box autoresizesSubviews="NO" title="Box" boxType="custom" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="642">
-                                    <rect key="frame" x="15" y="226" width="30" height="30"/>
+                                    <rect key="frame" x="15" y="266" width="30" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <view key="contentView">
                                         <rect key="frame" x="1" y="1" width="28" height="28"/>
@@ -724,7 +729,7 @@ world</string>
                                     <color key="fillColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </box>
                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="663">
-                                    <rect key="frame" x="13" y="201" width="55" height="17"/>
+                                    <rect key="frame" x="13" y="241" width="55" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Baseline" id="664">
                                         <font key="font" metaFont="system"/>
@@ -733,7 +738,7 @@ world</string>
                                     </textFieldCell>
                                 </textField>
                                 <box autoresizesSubviews="NO" title="Box" boxType="custom" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="670">
-                                    <rect key="frame" x="15" y="100" width="30" height="30"/>
+                                    <rect key="frame" x="15" y="140" width="30" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <view key="contentView">
                                         <rect key="frame" x="1" y="1" width="28" height="28"/>
@@ -747,7 +752,7 @@ world</string>
                                     <color key="fillColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </box>
                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="671">
-                                    <rect key="frame" x="13" y="75" width="92" height="17"/>
+                                    <rect key="frame" x="13" y="115" width="92" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Line fragment" id="672">
                                         <font key="font" metaFont="system"/>
@@ -756,7 +761,7 @@ world</string>
                                     </textFieldCell>
                                 </textField>
                                 <box autoresizesSubviews="NO" title="Box" boxType="custom" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="708">
-                                    <rect key="frame" x="15" y="37" width="30" height="30"/>
+                                    <rect key="frame" x="15" y="77" width="30" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <view key="contentView">
                                         <rect key="frame" x="1" y="1" width="28" height="28"/>
@@ -770,7 +775,7 @@ world</string>
                                     <color key="fillColor" red="0.86877572540000003" green="0.5310322046" blue="0.03007047996" alpha="1" colorSpace="calibratedRGB"/>
                                 </box>
                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="709">
-                                    <rect key="frame" x="13" y="12" width="125" height="17"/>
+                                    <rect key="frame" x="13" y="52" width="125" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Line fragment (flip)" id="710">
                                         <font key="font" metaFont="system"/>
@@ -779,7 +784,7 @@ world</string>
                                     </textFieldCell>
                                 </textField>
                                 <box autoresizesSubviews="NO" title="Box" boxType="custom" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="684">
-                                    <rect key="frame" x="15" y="163" width="30" height="30"/>
+                                    <rect key="frame" x="15" y="203" width="30" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <view key="contentView">
                                         <rect key="frame" x="1" y="1" width="28" height="28"/>
@@ -793,7 +798,7 @@ world</string>
                                     <color key="fillColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </box>
                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="685">
-                                    <rect key="frame" x="13" y="138" width="88" height="17"/>
+                                    <rect key="frame" x="13" y="178" width="88" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Baseline (flip)" id="686">
                                         <font key="font" metaFont="system"/>
@@ -823,6 +828,7 @@ world</string>
                             <constraint firstItem="708" firstAttribute="top" secondItem="671" secondAttribute="bottom" constant="8" symbolic="YES" id="717"/>
                             <constraint firstItem="709" firstAttribute="leading" secondItem="623" secondAttribute="leading" constant="16" id="718"/>
                             <constraint firstItem="708" firstAttribute="leading" secondItem="623" secondAttribute="leading" constant="16" id="719"/>
+                            <constraint firstAttribute="trailing" secondItem="709" secondAttribute="trailing" constant="16" id="Uic-Kq-qWp"/>
                         </constraints>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -923,8 +929,6 @@ world</string>
                     <constraint firstItem="536" firstAttribute="leading" secondItem="372" secondAttribute="leading" constant="20" symbolic="YES" id="544"/>
                     <constraint firstItem="556" firstAttribute="leading" secondItem="372" secondAttribute="leading" constant="20" symbolic="YES" id="560"/>
                     <constraint firstItem="556" firstAttribute="top" secondItem="536" secondAttribute="bottom" constant="8" symbolic="YES" id="565"/>
-                    <constraint firstItem="567" firstAttribute="top" secondItem="536" secondAttribute="bottom" constant="8" symbolic="YES" id="570"/>
-                    <constraint firstAttribute="trailing" secondItem="575" secondAttribute="trailing" constant="20" symbolic="YES" id="619"/>
                     <constraint firstItem="575" firstAttribute="leading" secondItem="556" secondAttribute="trailing" constant="8" symbolic="YES" id="620"/>
                     <constraint firstItem="567" firstAttribute="leading" secondItem="556" secondAttribute="trailing" constant="8" symbolic="YES" id="621"/>
                     <constraint firstItem="536" firstAttribute="trailing" secondItem="556" secondAttribute="trailing" id="622"/>
@@ -932,9 +936,7 @@ world</string>
                     <constraint firstItem="623" firstAttribute="leading" secondItem="567" secondAttribute="leading" id="635"/>
                     <constraint firstItem="623" firstAttribute="top" secondItem="372" secondAttribute="top" constant="20" symbolic="YES" id="636"/>
                     <constraint firstItem="623" firstAttribute="bottom" secondItem="536" secondAttribute="bottom" id="637"/>
-                    <constraint firstItem="556" firstAttribute="bottom" secondItem="575" secondAttribute="bottom" id="720"/>
                     <constraint firstItem="726" firstAttribute="leading" secondItem="722" secondAttribute="trailing" constant="8" symbolic="YES" id="729"/>
-                    <constraint firstAttribute="bottom" secondItem="556" secondAttribute="bottom" constant="65" id="735"/>
                     <constraint firstItem="726" firstAttribute="baseline" secondItem="722" secondAttribute="baseline" id="736"/>
                     <constraint firstAttribute="bottom" secondItem="738" secondAttribute="bottom" constant="20" symbolic="YES" id="781"/>
                     <constraint firstAttribute="bottom" secondItem="726" secondAttribute="bottom" constant="20" symbolic="YES" id="782"/>
@@ -947,6 +949,12 @@ world</string>
                     <constraint firstItem="748" firstAttribute="leading" secondItem="738" secondAttribute="trailing" constant="8" symbolic="YES" id="826"/>
                     <constraint firstItem="749" firstAttribute="leading" secondItem="748" secondAttribute="trailing" constant="8" symbolic="YES" id="827"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="749" secondAttribute="trailing" constant="20" symbolic="YES" id="842"/>
+                    <constraint firstItem="VJW-fc-HWy" firstAttribute="bottom" secondItem="556" secondAttribute="bottom" id="Efm-J6-K1r"/>
+                    <constraint firstItem="575" firstAttribute="leading" secondItem="VJW-fc-HWy" secondAttribute="leading" id="FYC-vt-hax"/>
+                    <constraint firstItem="726" firstAttribute="top" secondItem="556" secondAttribute="bottom" constant="10" symbolic="YES" id="bux-PQ-Vmc"/>
+                    <constraint firstItem="556" firstAttribute="top" secondItem="567" secondAttribute="top" id="jxh-JS-rjR"/>
+                    <constraint firstItem="575" firstAttribute="top" secondItem="567" secondAttribute="bottom" constant="6" symbolic="YES" id="uJE-HS-Eoa"/>
+                    <constraint firstItem="VJW-fc-HWy" firstAttribute="top" secondItem="575" secondAttribute="bottom" constant="6" symbolic="YES" id="xnD-ay-wNF"/>
                 </constraints>
             </view>
         </window>

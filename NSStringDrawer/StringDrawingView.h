@@ -14,6 +14,7 @@
 - (void)setFlipped:(BOOL)flipped;
 
 @property BOOL usesDeviceMetrics;
+@property BOOL usesFontLeading;
 
 @property CGFloat headIndent;
 @property CGFloat firstLineHeadIndent;
