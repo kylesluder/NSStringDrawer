@@ -85,7 +85,7 @@ NSDictionary *DefaultAttributesDictionaryWithIndents(id font, CGFloat headIndent
     StrokeRect(ctx, rect);
     
     
-    NSStringDrawingOptions options = 0;
+    NSStringDrawingOptions options = NSStringDrawingUsesFontLeading;
     if (useDeviceMetrics)
         options |= NSStringDrawingUsesDeviceMetrics;
     
