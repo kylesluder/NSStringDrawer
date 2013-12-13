@@ -678,9 +678,9 @@ world</string>
                         </connections>
                     </textField>
                     <button translatesAutoresizingMaskIntoConstraints="NO" id="567">
-                        <rect key="frame" x="347" y="88" width="69" height="18"/>
+                        <rect key="frame" x="347" y="88" width="120" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="check" title="Flipped" bezelStyle="regularSquare" imagePosition="left" inset="2" id="568">
+                        <buttonCell key="cell" type="check" title="Context flipped" bezelStyle="regularSquare" imagePosition="left" inset="2" id="568">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -770,9 +770,9 @@ world</string>
                                     <color key="fillColor" red="0.86877572540000003" green="0.5310322046" blue="0.03007047996" alpha="1" colorSpace="calibratedRGB"/>
                                 </box>
                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="709">
-                                    <rect key="frame" x="13" y="12" width="125" height="17"/>
+                                    <rect key="frame" x="13" y="12" width="127" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Line fragment (flip)" id="710">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Line fragment (inv.)" id="710">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -793,9 +793,9 @@ world</string>
                                     <color key="fillColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </box>
                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="685">
-                                    <rect key="frame" x="13" y="138" width="88" height="17"/>
+                                    <rect key="frame" x="13" y="138" width="90" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Baseline (flip)" id="686">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Baseline (inv.)" id="686">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

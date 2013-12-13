@@ -95,12 +95,10 @@ NSDictionary *DefaultAttributesDictionaryWithIndents(id font, CGFloat headIndent
         [[[COLOR redColor] colorWithAlphaComponent:0.5f] setFill];
         CGContextFillRect(ctx, lineFragmentRect);
         
-        if (contextIsFlipped) {
-            [[[COLOR orangeColor] colorWithAlphaComponent:0.5f] setFill];
-            lineFragmentRect.origin.y = -lineFragmentRect.origin.y;
-            lineFragmentRect.origin.y -= lineFragmentRect.size.height;
-            CGContextFillRect(ctx, lineFragmentRect);
-        }
+        [[[COLOR orangeColor] colorWithAlphaComponent:0.5f] setFill];
+        lineFragmentRect.origin.y = -lineFragmentRect.origin.y;
+        lineFragmentRect.origin.y -= lineFragmentRect.size.height;
+        CGContextFillRect(ctx, lineFragmentRect);
     }
     
     {
@@ -109,12 +107,10 @@ NSDictionary *DefaultAttributesDictionaryWithIndents(id font, CGFloat headIndent
         [[[COLOR greenColor] colorWithAlphaComponent:0.5f] setFill];
         CGContextFillRect(ctx, baselineRect);
         
-        if (contextIsFlipped) {
-            [[[COLOR blueColor] colorWithAlphaComponent:0.5f] setFill];
-            baselineRect.origin.y = -baselineRect.origin.y;
-            baselineRect.origin.y -= baselineRect.size.height;
-            CGContextFillRect(ctx, baselineRect);
-        }
+        [[[COLOR blueColor] colorWithAlphaComponent:0.5f] setFill];
+        baselineRect.origin.y = -baselineRect.origin.y;
+        baselineRect.origin.y -= baselineRect.size.height;
+        CGContextFillRect(ctx, baselineRect);
     }
     
     NSMutableDictionary *mutableAttributes = [attributes mutableCopy];
