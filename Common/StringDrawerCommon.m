@@ -81,7 +81,7 @@ NSDictionary *DefaultAttributesDictionaryWithIndents(id font, CGFloat headIndent
     CGContextSetBlendMode(ctx, kCGBlendModeNormal);
     
     
-    [[COLOR blueColor] setStroke];
+    [[COLOR magentaColor] setStroke];
     StrokeRect(ctx, rect);
     
     
